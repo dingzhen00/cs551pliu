@@ -11,11 +11,12 @@ conn.execute('DROP TABLE IF EXISTS imdbmoive')
 print("table dropped successfully");
 
 # drop the data from the table so that if we rerun
-conn.execute('CREATE TABLE imdbmovie6 ( link TEXT PRIMARY KEY, movie_title TEXT, movie_year TEXT,movie_certificate TEXT, movie_time TEXT, movie_genre TEXT, movie_imdbrating TEXT, movie_overview TEXT, meta_score TEXT, director TEXT, star1 TEXT, star2 TEXT, star3 TEXT, star4 TEXT, no_of_notes TEXT, gross TEXT, FOREIGN KEY(movie_title) REFERENCES movie3(movie_title))')
+conn.execute('CREATE TABLE movie6 ( movie_time TEXT , movie_title TEXT PRIMARY KEY, movie_budget TEXT, domestic_gross TEXT, worldwide_gross TEXT)')
+print("table 1 created successfully");
+conn.execute('CREATE TABLE imdbmovie6 ( link TEXT PRIMARY KEY, movie_title TEXT, movie_year TEXT,movie_certificate TEXT, movie_time TEXT, movie_genre TEXT, movie_imdbrating TEXT, movie_overview TEXT, meta_score TEXT, director TEXT, star1 TEXT, star2 TEXT, star3 TEXT, star4 TEXT, no_of_notes TEXT, gross TEXT, FOREIGN KEY(movie_title) REFERENCES movie6(movie_title))')
 
 print("table 1 created successfully");
-conn.execute('CREATE TABLE movie6 ( movie_time TEXT PRIMARY KEY, movie_title TEXT, movie_budget TEXT, domestic_gross TEXT, worldwide_gross TEXT)')
-print("table 1 created successfully");
+
 
 
 with open('app/dataset/imdb_top_1000.csv', newline='') as f:

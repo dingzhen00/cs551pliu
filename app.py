@@ -10,6 +10,19 @@ db_name = 'movie.db'
 def index():
     return render_template('index.html')
 
+
+@app.route('/mix/<movie_title>')
+def customer_details(id):
+    conn = sqlite3.connect(movie.db)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    # get results from customers
+    cur.execute("select * from imdbmovie6 WHERE movie6=?", (movie_title))
+    customer = cur.fetchall()
+    conn.close()
+    return render_template('mix.html', imdbmovie6=imdbmovie6)
+
+
 @app.route('/movie')
 def movie():
     conn = sqlite3.connect('movie.db')
