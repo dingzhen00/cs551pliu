@@ -1,1 +1,4 @@
+* cc2d85d : add test folder to test two pages,one is moive,one is imdbmovie
+* 83ab0a9 : add
+* 0a56c39 : edit the index html file
 * df0c22d : edit the templats of html file
