@@ -38,7 +38,7 @@ pycodestyle==2.5.0
 pycrypto==2.6.1
 pygame==1.9.6
 Pygments==2.2.0
-pygobject==3.26.1
+pygobject==3.27.0
 pyOpenSSL==17.5.0
 pyparsing==2.4.5
 python-apt==1.6.5+ubuntu0.3
