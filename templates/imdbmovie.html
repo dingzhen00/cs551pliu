@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Game</title>
+    <style>
+        background-color:#71a879
+    </style>
+</head>
+<body>
+<h1>imdb score of movie</h1>
+
+    {% for row in rows %}
+    <p>imdb movie dataset: 
+    <b>{{row["link"]}}</b> | 
+    {{row["movie_title"]}} | 
+    {{row["movie_year"]}} | 
+    {{row['movie_Certificate']}}| 
+    {{row["movie_time"]}} |
+    {{row["movie_genre"]}} |
+    {{row["movie_imdbrating"]}} |
+    {{row["movie_overview"]}} |
+    {{row["meta_score"]}} |
+    {{row["directors"]}} |
+    {{row["star1"]}} |
+    {{row["star2"]}} |
+    {{row["star3"]}} |
+    {{row["star4"]}} |
+    {{row["no_of_notes"]}} |
+    {{row["gross"]}} |
+
+    </p>
+    {% endfor %}
+</body></html>
